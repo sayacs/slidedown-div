@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slidedown Div</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include Prism.js JavaScript file -->
+    <script src="js/prism.js"></script>
+    <link href="css/prism.css" rel="stylesheet">
+
+    <style>
+        #myDiv {
+            transition: top 0.3s ease-in-out;
+            top: -100px;
+        }
+    </style>
+</head>
+<body class="">
+
+    <div id="myDiv" class="fixed top-[-100px] w-full bg-blue-500 text-white p-4 z-10">
+        This is a top bar
+    </div>
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold underline">
+            Slidedown Div
+        </h1>
+        <div class="mt-6 space-y-4">
+            <p class="text-2xl">Slidedown 100px to show a fixed top div.</p>
+        </div>
+
+        <pre class=" bg-blue-500 p-4 rounded-lg">
+            <code class="language-javascript">
+                document.addEventListener("DOMContentLoaded", function() {
+                    var myDiv = document.getElementById('myDiv');
+        
+                    function toggleDivVisibility() {
+                        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        
+                        if (scrollPosition > 100) {
+                            myDiv.style.top = '0';
+                        } else {
+                            myDiv.style.top = '-100px';
+                        }
+                    }
+        
+                    window.addEventListener('scroll', toggleDivVisibility);
+                });
+            </code>
+
+            <code class="language-css">
+                #myDiv {
+                    transition: top 0.3s ease-in-out;
+                    top: -100px;
+                }
+            </code>
+        </pre>
+        <!-- Dummy content begins -->
+        <div class="mt-6 space-y-4">
+            <h3 class="text-xl font-bold">Dummy text</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum nunc sed arcu gravida, vel mattis nisi laoreet. Nulla sit amet arcu quis purus commodo lacinia. Quisque eget ante a felis facilisis bibendum ut non enim. Sed eget ipsum a purus varius consectetur. Curabitur viverra, sem vel congue congue, ex orci ultrices felis, ac tincidunt justo nunc sit amet metus. Vestibulum auctor erat ac hendrerit rhoncus. Nullam sit amet est non lectus tincidunt ultrices in in neque. Integer hendrerit nisi ut tortor varius dignissim. Vivamus a enim at leo interdum pellentesque a non tortor. Sed vitae bibendum nulla. Aliquam ac justo vel arcu tristique viverra. Integer a sollicitudin arcu, a euismod purus. Etiam sit amet ligula ac augue tincidunt egestas. Fusce ut metus eget purus euismod bibendum. Nunc et tortor a tellus faucibus suscipit.
+            </p>
+            
+            <p>
+                Nullam varius, sapien in viverra facilisis, massa ex sollicitudin velit, in sagittis felis leo eu libero. Sed a ipsum ac ex tincidunt ultrices in vel augue. Sed euismod euismod ligula id bibendum. Fusce sed arcu bibendum, facilisis ligula in, tincidunt felis. Vivamus bibendum dolor non metus facilisis, sed consectetur est bibendum. Vestibulum consectetur justo non posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Duis non venenatis justo. Vivamus tristique sem a venenatis euismod. Sed scelerisque fringilla ex, eu venenatis turpis rhoncus sed. Curabitur a sem at quam dictum posuere vel nec odio.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum nunc sed arcu gravida, vel mattis nisi laoreet. Nulla sit amet arcu quis purus commodo lacinia. Quisque eget ante a felis facilisis bibendum ut non enim. Sed eget ipsum a purus varius consectetur. Curabitur viverra, sem vel congue congue, ex orci ultrices felis, ac tincidunt justo nunc sit amet metus. Vestibulum auctor erat ac hendrerit rhoncus. Nullam sit amet est non lectus tincidunt ultrices in in neque. Integer hendrerit nisi ut tortor varius dignissim. Vivamus a enim at leo interdum pellentesque a non tortor. Sed vitae bibendum nulla. Aliquam ac justo vel arcu tristique viverra. Integer a sollicitudin arcu, a euismod purus. Etiam sit amet ligula ac augue tincidunt egestas. Fusce ut metus eget purus euismod bibendum. Nunc et tortor a tellus faucibus suscipit.
+            </p>
+            
+            <p>
+                Nullam varius, sapien in viverra facilisis, massa ex sollicitudin velit, in sagittis felis leo eu libero. Sed a ipsum ac ex tincidunt ultrices in vel augue. Sed euismod euismod ligula id bibendum. Fusce sed arcu bibendum, facilisis ligula in, tincidunt felis. Vivamus bibendum dolor non metus facilisis, sed consectetur est bibendum. Vestibulum consectetur justo non posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Duis non venenatis justo. Vivamus tristique sem a venenatis euismod. Sed scelerisque fringilla ex, eu venenatis turpis rhoncus sed. Curabitur a sem at quam dictum posuere vel nec odio.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum nunc sed arcu gravida, vel mattis nisi laoreet. Nulla sit amet arcu quis purus commodo lacinia. Quisque eget ante a felis facilisis bibendum ut non enim. Sed eget ipsum a purus varius consectetur. Curabitur viverra, sem vel congue congue, ex orci ultrices felis, ac tincidunt justo nunc sit amet metus. Vestibulum auctor erat ac hendrerit rhoncus. Nullam sit amet est non lectus tincidunt ultrices in in neque. Integer hendrerit nisi ut tortor varius dignissim. Vivamus a enim at leo interdum pellentesque a non tortor. Sed vitae bibendum nulla. Aliquam ac justo vel arcu tristique viverra. Integer a sollicitudin arcu, a euismod purus. Etiam sit amet ligula ac augue tincidunt egestas. Fusce ut metus eget purus euismod bibendum. Nunc et tortor a tellus faucibus suscipit.
+            </p>
+            
+            <p>
+                Nullam varius, sapien in viverra facilisis, massa ex sollicitudin velit, in sagittis felis leo eu libero. Sed a ipsum ac ex tincidunt ultrices in vel augue. Sed euismod euismod ligula id bibendum. Fusce sed arcu bibendum, facilisis ligula in, tincidunt felis. Vivamus bibendum dolor non metus facilisis, sed consectetur est bibendum. Vestibulum consectetur justo non posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Duis non venenatis justo. Vivamus tristique sem a venenatis euismod. Sed scelerisque fringilla ex, eu venenatis turpis rhoncus sed. Curabitur a sem at quam dictum posuere vel nec odio.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum nunc sed arcu gravida, vel mattis nisi laoreet. Nulla sit amet arcu quis purus commodo lacinia. Quisque eget ante a felis facilisis bibendum ut non enim. Sed eget ipsum a purus varius consectetur. Curabitur viverra, sem vel congue congue, ex orci ultrices felis, ac tincidunt justo nunc sit amet metus. Vestibulum auctor erat ac hendrerit rhoncus. Nullam sit amet est non lectus tincidunt ultrices in in neque. Integer hendrerit nisi ut tortor varius dignissim. Vivamus a enim at leo interdum pellentesque a non tortor. Sed vitae bibendum nulla. Aliquam ac justo vel arcu tristique viverra. Integer a sollicitudin arcu, a euismod purus. Etiam sit amet ligula ac augue tincidunt egestas. Fusce ut metus eget purus euismod bibendum. Nunc et tortor a tellus faucibus suscipit.
+            </p>
+            
+            <p>
+                Nullam varius, sapien in viverra facilisis, massa ex sollicitudin velit, in sagittis felis leo eu libero. Sed a ipsum ac ex tincidunt ultrices in vel augue. Sed euismod euismod ligula id bibendum. Fusce sed arcu bibendum, facilisis ligula in, tincidunt felis. Vivamus bibendum dolor non metus facilisis, sed consectetur est bibendum. Vestibulum consectetur justo non posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Duis non venenatis justo. Vivamus tristique sem a venenatis euismod. Sed scelerisque fringilla ex, eu venenatis turpis rhoncus sed. Curabitur a sem at quam dictum posuere vel nec odio.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum nunc sed arcu gravida, vel mattis nisi laoreet. Nulla sit amet arcu quis purus commodo lacinia. Quisque eget ante a felis facilisis bibendum ut non enim. Sed eget ipsum a purus varius consectetur. Curabitur viverra, sem vel congue congue, ex orci ultrices felis, ac tincidunt justo nunc sit amet metus. Vestibulum auctor erat ac hendrerit rhoncus. Nullam sit amet est non lectus tincidunt ultrices in in neque. Integer hendrerit nisi ut tortor varius dignissim. Vivamus a enim at leo interdum pellentesque a non tortor. Sed vitae bibendum nulla. Aliquam ac justo vel arcu tristique viverra. Integer a sollicitudin arcu, a euismod purus. Etiam sit amet ligula ac augue tincidunt egestas. Fusce ut metus eget purus euismod bibendum. Nunc et tortor a tellus faucibus suscipit.
+            </p>
+            
+            <p>
+                Nullam varius, sapien in viverra facilisis, massa ex sollicitudin velit, in sagittis felis leo eu libero. Sed a ipsum ac ex tincidunt ultrices in vel augue. Sed euismod euismod ligula id bibendum. Fusce sed arcu bibendum, facilisis ligula in, tincidunt felis. Vivamus bibendum dolor non metus facilisis, sed consectetur est bibendum. Vestibulum consectetur justo non posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Duis non venenatis justo. Vivamus tristique sem a venenatis euismod. Sed scelerisque fringilla ex, eu venenatis turpis rhoncus sed. Curabitur a sem at quam dictum posuere vel nec odio.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum nunc sed arcu gravida, vel mattis nisi laoreet. Nulla sit amet arcu quis purus commodo lacinia. Quisque eget ante a felis facilisis bibendum ut non enim. Sed eget ipsum a purus varius consectetur. Curabitur viverra, sem vel congue congue, ex orci ultrices felis, ac tincidunt justo nunc sit amet metus. Vestibulum auctor erat ac hendrerit rhoncus. Nullam sit amet est non lectus tincidunt ultrices in in neque. Integer hendrerit nisi ut tortor varius dignissim. Vivamus a enim at leo interdum pellentesque a non tortor. Sed vitae bibendum nulla. Aliquam ac justo vel arcu tristique viverra. Integer a sollicitudin arcu, a euismod purus. Etiam sit amet ligula ac augue tincidunt egestas. Fusce ut metus eget purus euismod bibendum. Nunc et tortor a tellus faucibus suscipit.
+            </p>
+            
+            <p>
+                Nullam varius, sapien in viverra facilisis, massa ex sollicitudin velit, in sagittis felis leo eu libero. Sed a ipsum ac ex tincidunt ultrices in vel augue. Sed euismod euismod ligula id bibendum. Fusce sed arcu bibendum, facilisis ligula in, tincidunt felis. Vivamus bibendum dolor non metus facilisis, sed consectetur est bibendum. Vestibulum consectetur justo non posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Duis non venenatis justo. Vivamus tristique sem a venenatis euismod. Sed scelerisque fringilla ex, eu venenatis turpis rhoncus sed. Curabitur a sem at quam dictum posuere vel nec odio.
+            </p>
+            
+            <!-- Continue with more <p> tags to reach 1000 words -->
+            
+            
+            
+            
+            
+        </div>
+        <!-- Dummy content ends -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var myDiv = document.getElementById('myDiv');
+
+            function toggleDivVisibility() {
+                var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollPosition > 100) {
+                    myDiv.style.top = '0';
+                } else {
+                    myDiv.style.top = '-100px';
+                }
+            }
+
+            window.addEventListener('scroll', toggleDivVisibility);
+        });
+    </script>
+</body>
+</html>
